@@ -1,5 +1,6 @@
-const loadingText = document.querySelector(".loading") as HTMLElement;
+const loadContent = document.querySelector(".loadingGif") as HTMLDivElement;
 const wrapper = document.querySelector(".movie-wrapper") as HTMLElement;
+
 
 async function getAllMovies() {
     const response = await fetch("https://swapi.dev/api/films/");
@@ -17,7 +18,7 @@ function showAllMovies() {
     console.log("Loading");
 
     getAllMovies().then((listOfMovies)=>{
-        loadingText.style.display = "none";
+        loadContent.classList.remove("loadingGif");
 
         for (let i = 0; i< listOfMovies.results.length; i++){          
  

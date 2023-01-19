@@ -14,7 +14,7 @@ h1{
     font-size: 10vh;
     margin-bottom: 0;
 }
-h2{
+h2,h3{
     font-size: 5vh;
 }
 
@@ -39,9 +39,27 @@ h2{
     font-weight: bolder;
     box-shadow: 0px 0px 5px 5px grey;
 }
+.movieCard > *{
+    margin: 10px;
+}
 
 .rndImg{
     max-width: 200px;
     max-height: 200px;
+}
+
+.loadingGif {
+    grid-column-start: 2;
+    border: 16px solid rgb(217 195 195 / 40%);
+    border-top: 16px solid rgb(75 6 76 / 40%);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
